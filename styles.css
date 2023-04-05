@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+
+    --bg-color: #E5E5E5;
+
+    --text-color: #323239;
+
+    --color-activate-one: #02789c;
+    --color-activate-two: #FFFFFF;
+
+    --color-disabled-one: #E1E1E6;
+    --color-disabled-two: #323238;
+
+    --bg-primary-color: #e0e0e5;
+
+    font-size: 62.5%;
+}
+
+
+body {
+
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Roboto', sans-serif;
+
+    font-size: 12.6rem;
+    /* line-height: 14.8rem; */
+    /* identical to box height */
+/* 
+    text-align: center;
+    text-transform: uppercase; */
+
+    /* display: grid;
+    min-height: 100vh; */
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.active>svg>path:nth-child(1) {
+    fill: var(--color-activate-one);
+}
+
+.active>svg>path:nth-child(2) {
+    fill: var(--color-activate-two);
+}
+
+
+main{
+   display: flex;
+   justify-self: center;
+   /* align-self: end; */
+   margin-top: 19.6rem;
+   margin-left: 23.3rem;
+   place-items: center;
+}
+
+
+#pomodoro{
+    font-size: clamp(12.6rem, 4rem + 10vw, 9.9rem);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    margin-right: 19.2rem;
+    gap: 1.7rem;
+}
+
+.timer{
+    display: flex;
+    
+}
+
+.controls{
+    display: flex;
+    gap: 4rem;
+}
+
+
+main #effects{
+    display: grid;
+    
+    gap: 3.2rem;
+    
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+
+
+
