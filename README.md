@@ -7,14 +7,8 @@
 
 
 
-[👾] Mudar a cor dos cards quando selecionados
+[👾] Criar a versão Dark Mode
 
-[👾] O card deve emitir um som específico quando selecionado
+[👾] Trabalhar com o volume de cada card
 
-[👾] Botão play deve acionar o timer
 
-[👾] Botão stop deve parar o timer
-
-[👾] Botão + deve aumenta em mais 5 minutos o tempo do timer
-
-[👾] Botão - deve diminuir em mais 5 minutos o tempo do timer
