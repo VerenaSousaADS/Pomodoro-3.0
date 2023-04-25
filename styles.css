@@ -6,6 +6,7 @@
 
 :root {
 
+    --bg-light: #FFF;
     --bg-color: #E5E5E5;
 
     --text-color: #323239;
@@ -17,6 +18,8 @@
     --color-disabled-two: #323238;
 
     --bg-primary-color: #e0e0e5;
+
+    --text-dark: #FFFFFF;
 
     font-size: 62.5%;
 }
@@ -86,6 +89,9 @@ main{
 
 
 main #effects{
+
+    /* position: relative; */
+
     display: grid;
     
     gap: 3.2rem;
@@ -94,6 +100,55 @@ main #effects{
     grid-template-rows: 1fr 1fr;
 }
 
+.card-forest, 
+.card-rain, 
+.card-coffee-shop, 
+.card-fireplace {
+    position: relative;
+}
 
 
 
+input[type="range"] {
+    appearance: none;
+    
+    width: clamp(6rem, 7vw, 9rem);
+    cursor: pointer;
+
+    background: transparent;
+
+    position: absolute;
+    /* bottom: clamp(1.6rem, 1.9vw, 2.4rem); */
+
+    bottom: 7rem;
+    left: calc(50% - clamp(6rem, 7vw, 9rem) / 2)
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    appearance: none;
+    
+    width: clamp(6rem, 7vw, 9rem);
+    height: clamp(.3rem, .3vw, .4rem);
+    border-radius: .5rem;
+
+    background-color: var(--text-color);
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    
+    width: clamp(1.1rem, 1.3vw, 1.6rem);
+    height: clamp(1.1rem, 1.3vw, 1.6rem);
+    border-radius: 50%;
+    
+    background-color: var(--text-color);
+
+    position: relative;
+    top: calc(50% - clamp(1.1rem, 1.3vw, 1.6rem) / 2);
+}
+
+main div.active input[type="range"]::-webkit-slider-runnable-track,
+main div.active input[type="range"]::-webkit-slider-thumb {
+  background-color: var(--bg-light);
+}
+    
