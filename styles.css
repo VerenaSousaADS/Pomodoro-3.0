@@ -6,20 +6,18 @@
 
 :root {
 
-    --bg-light: #FFF;
     --bg-color: #E5E5E5;
 
-    --text-color: #323239;
+    --text-color-light: hsl(240, 7%, 21%);
+    --text-color-dark: hsl(0, 0%, 100%);
 
-    --color-activate-one: #02789c;
-    --color-activate-two: #FFFFFF;
+    --color-activate-one: hsl(194, 97%, 31%);
+    --color-activate-two: hsl(0, 0%, 100%);
 
-    --color-disabled-one: #E1E1E6;
-    --color-disabled-two: #323238;
+    --color-disabled-one: hsl(240, 9%, 89%);
+    --color-disabled-two: hsl(240, 6%, 21%);
 
     --bg-primary-color: #e0e0e5;
-
-    --text-dark: #FFFFFF;
 
     font-size: 62.5%;
 }
@@ -42,6 +40,22 @@ body {
     min-height: 100vh; */
 }
 
+header{
+    position: absolute;
+    top: clamp(4rem, 4.7vw, 6rem);
+    right: clamp(4rem, 4.7vw, 6rem);
+}
+
+header button svg{
+    width: clamp(2.7rem, 3.1vw, 4rem);
+    height: auto;
+}
+
+.hide{
+    display: none
+    ;
+}
+
 button {
     background-color: transparent;
     border: none;
@@ -52,7 +66,7 @@ button {
     fill: var(--color-activate-one);
 }
 
-.active>svg>path:nth-child(2) {
+.active>svg>path:last-child {
     fill: var(--color-activate-two);
 }
 
@@ -109,46 +123,3 @@ main #effects{
 
 
 
-input[type="range"] {
-    appearance: none;
-    
-    width: clamp(6rem, 7vw, 9rem);
-    cursor: pointer;
-
-    background: transparent;
-
-    position: absolute;
-    /* bottom: clamp(1.6rem, 1.9vw, 2.4rem); */
-
-    bottom: 7rem;
-    left: calc(50% - clamp(6rem, 7vw, 9rem) / 2)
-}
-
-input[type="range"]::-webkit-slider-runnable-track {
-    appearance: none;
-    
-    width: clamp(6rem, 7vw, 9rem);
-    height: clamp(.3rem, .3vw, .4rem);
-    border-radius: .5rem;
-
-    background-color: var(--text-color);
-}
-
-input[type="range"]::-webkit-slider-thumb {
-    appearance: none;
-    
-    width: clamp(1.1rem, 1.3vw, 1.6rem);
-    height: clamp(1.1rem, 1.3vw, 1.6rem);
-    border-radius: 50%;
-    
-    background-color: var(--text-color);
-
-    position: relative;
-    top: calc(50% - clamp(1.1rem, 1.3vw, 1.6rem) / 2);
-}
-
-main div.active input[type="range"]::-webkit-slider-runnable-track,
-main div.active input[type="range"]::-webkit-slider-thumb {
-  background-color: var(--bg-light);
-}
-    
