@@ -123,3 +123,45 @@ main #effects{
 
 
 
+
+input[type="range"] {
+    appearance: none;
+    
+    width: clamp(6rem, 7vw, 9rem);
+    cursor: pointer;
+
+    background: transparent;
+
+    position: absolute;
+    /* bottom: clamp(1.6rem, 1.9vw, 2.4rem); */
+    bottom: 7rem;
+    left: calc(50% - clamp(6rem, 7vw, 9rem) / 2)
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    
+    width: clamp(6rem, 7vw, 9rem);
+    height: clamp(.3rem, .3vw, .4rem);
+    border-radius: .5rem;
+
+    background-color: var(--text-light);
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    
+    width: clamp(1.1rem, 1.3vw, 1.6rem);
+    height: clamp(1.1rem, 1.3vw, 1.6rem);
+    border-radius: 50%;
+    
+    background-color: var(--text-light);
+
+    position: relative;
+    top: calc(50% - clamp(1.1rem, 1.3vw, 1.6rem) / 2);
+}
+
+main div.active input[type="range"]::-webkit-slider-runnable-track,
+main div.active input[type="range"]::-webkit-slider-thumb {
+  background-color: var(--bg-light);
+}
