@@ -162,7 +162,7 @@ input[type="range"]::-webkit-slider-runnable-track {
     height: clamp(.3rem, .3vw, .4rem);
     border-radius: .5rem;
 
-    background-color: var(--text-light);
+    background-color: hsl(240, 6%, 21%);
 }
 
 input[type="range"]::-webkit-slider-thumb {
@@ -172,7 +172,7 @@ input[type="range"]::-webkit-slider-thumb {
     height: clamp(1.1rem, 1.3vw, 1.6rem);
     border-radius: 50%;
     
-    background-color: var(--text-light);
+    background-color: hsl(240, 6%, 21%);
 
     position: relative;
     top: calc(50% - clamp(1.1rem, 1.3vw, 1.6rem) / 2);
@@ -180,5 +180,5 @@ input[type="range"]::-webkit-slider-thumb {
 
 main div.active input[type="range"]::-webkit-slider-runnable-track,
 main div.active input[type="range"]::-webkit-slider-thumb {
-  background-color: var(--bg-light);
+  background-color: #FFFFFF;
 }
