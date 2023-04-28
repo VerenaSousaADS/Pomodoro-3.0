@@ -6,7 +6,7 @@
 
 :root {
 
-    --bg-color: #E5E5E5;
+    /* --bg-color: #E5E5E5;
 
     --text-color-light: hsl(240, 7%, 21%);
     --text-color-dark: hsl(0, 0%, 100%);
@@ -19,14 +19,31 @@
 
     --bg-primary-color: #e0e0e5;
 
+    font-size: 62.5%; */
+
+
+    --bg-light: #FFFFFF;
+    --bg-dark: hsl(240, 5%, 7%);
+
+    --base-color: 240;
+    --bg-cards-light: hsl(240, 9%, 89%);
+    --bg-cards-dark: hsl(240, 6%, 17%);
+    --bg-cards-select-light: hsl(194, 97%, 31%);
+    --bg-cards-select-dark: hsl(195, 74%, 15%);
+    --controls-dark: hsl(240, 7%, 78%);
+
+    --text-light: hsl(240, 6%, 21%);
+    --text-dark: #FFFFFF;
+
     font-size: 62.5%;
 }
 
 
+
 body {
 
-    background-color: var(--bg-color);
-    color: var(--text-color);
+    background-color: var(--bg-light);
+    color: var(--text-light);
     font-family: 'Roboto', sans-serif;
 
     font-size: 12.6rem;
@@ -63,11 +80,11 @@ button {
 }
 
 .active>svg>path:nth-child(1) {
-    fill: var(--color-activate-one);
+    fill: hsl(194, 97%, 31%);
 }
 
 .active>svg>path:last-child {
-    fill: var(--color-activate-two);
+    fill: white;
 }
 
 
