@@ -7,6 +7,8 @@
 :root {
 
     --bg-color: #E5E5E5;
+    --bg-dark: hsl(240, 5%, 7%);
+
 
     --text-color-light: hsl(240, 7%, 21%);
     --text-color-dark: hsl(0, 0%, 100%);
@@ -17,9 +19,23 @@
     --color-disabled-one: hsl(240, 9%, 89%);
     --color-disabled-two: hsl(240, 6%, 21%);
 
+    --controls-dark: hsl(240, 7%, 78%);
+
     --bg-primary-color: #e0e0e5;
 
+    --text-light: #323239;
+    --text-dark: #FFFFFF;
+
+
+    --bg-cards-light: #e0e0e5;
+    --bg-cards-dark: #29292e;
+    --bg-cards-select-light: hsl(194, 97%, 31%);
+    --bg-cards-select-dark: hsl(195, 74%, 15%);
+
+
     font-size: 62.5%;
+
+   
 }
 
 
@@ -139,7 +155,7 @@ input[type="range"] {
 }
 
 input[type="range"]::-webkit-slider-runnable-track {
-    -webkit-appearance: none;
+    appearance: none;
     
     width: clamp(6rem, 7vw, 9rem);
     height: clamp(.3rem, .3vw, .4rem);
@@ -149,7 +165,7 @@ input[type="range"]::-webkit-slider-runnable-track {
 }
 
 input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none;
+    appearance: none;
     
     width: clamp(1.1rem, 1.3vw, 1.6rem);
     height: clamp(1.1rem, 1.3vw, 1.6rem);
@@ -164,4 +180,35 @@ input[type="range"]::-webkit-slider-thumb {
 main div.active input[type="range"]::-webkit-slider-runnable-track,
 main div.active input[type="range"]::-webkit-slider-thumb {
   background-color: var(--bg-light);
+}
+
+
+body.dark-mode{
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+
+    transition: background-color .5s ease;
+}
+
+
+body.dark-mode #controls button svg path{
+    fill: var(--controls-dark);
+}
+
+body.dark-mode .page-wrapper header button {
+    background-color: var(--bg-cards-dark);
+
+    transition: background .5s ease;
+}
+
+body.dark-mode .page-wrapper #effects.active button {
+    background-color: var(--bg-cards-select-dark);
+}
+
+body.dark-mode #effects button svg path {
+    fill: var(--controls-dark);
+}
+
+body.dark-mode #effects div.active button svg path {
+    fill: var(--bg-light);
 }
