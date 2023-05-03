@@ -172,7 +172,7 @@ input[type="range"]::-webkit-slider-thumb {
     height: clamp(1.1rem, 1.3vw, 1.6rem);
     border-radius: 50%;
     
-    background-color: hsl(240, 6%, 21%);
+    background-color: hsl(240, 7%, 21%);
 
     position: relative;
     top: calc(50% - clamp(1.1rem, 1.3vw, 1.6rem) / 2);
